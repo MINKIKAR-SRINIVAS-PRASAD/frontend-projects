@@ -1,0 +1,185 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #161616;
+    color: #fff;
+  }
+  a {
+    color: #f8f0f0;
+    text-decoration: none;
+  }
+  img {
+    width: 1000%;
+    border-radius: px;
+  }
+  .container {
+    max-width: 12000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .header {
+    background: #0f9aaf1d;
+    padding: 20px 0;
+    position: relative;
+    top: 0;
+    z-index: 10;
+  }
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00d2fc;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .nav a {
+    padding: 10px;
+  }
+  .order-btn {
+    background-color: #00fc2e;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2025/3/24/6c37bd85-e460-4f35-9a27-ea97d88f4e3a_5934.jpg') no-repeat center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(11, 11, 11, 0.6);
+  }
+  .hero-content {
+    position: rotative;
+    text-align: right;
+    z-index: 2;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+    color: #f2f2f2;
+  }
+  .hero-buttons button {
+    margin: 0 10px;
+    padding: 12px 24px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .btn-primary {
+    background-color: #effc00;
+    color: #000;
+  }
+  .btn-secondary {
+    background: transparent;
+    color: #7afc00;
+    border: 2px solid #fcb900;
+  }
+  
+  /* Featured Section */
+  .featured {
+    padding: 60px 20px;
+    background-color: #0f9aaf1d;
+    text-align: center;
+  }
+  .featured h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+   img {
+    width: 100%;
+    border-radius: px;
+  }
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+  .card h3 {
+    margin: 10px 0 5px;
+  }
+  
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #0f9aaf1d;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #00d2fc;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #0f9aaf1d;
+}
+  
+  /* Footer */
+  .footer {
+    background-color: #0f9aaf1d;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  }

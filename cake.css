@@ -1,0 +1,102 @@
+ body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffe0e0, #fff0f5);
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .cake {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    /* Cake Layers */
+    .layer {
+      position: absolute;
+      width: 200px;
+      height: 40px;
+      background: #ffb347;
+      border-bottom: 8px solid #e67a00;
+      border-radius: 0 0 20px 20px;
+      opacity: 0;
+      transform: translateY(-100px);
+      animation: drop 1s forwards;
+    }
+    .layer:nth-child(1) { bottom: 0; animation-delay: 0.5s; }
+    .layer:nth-child(2) { bottom: 40px; animation-delay: 1.5s; }
+    .layer:nth-child(3) { bottom: 80px; animation-delay: 2.5s; }
+
+    @keyframes drop {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Candle */
+    .candle {
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 60px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: inset 0 -5px #ff6347;
+      opacity: 0;
+      animation: appear 1s forwards;
+      animation-delay: 3.5s;
+    }
+
+    /* Flame */
+    .flame {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 30px;
+      background: radial-gradient(circle, gold 40%, orange 60%, transparent 70%);
+      border-radius: 50%;
+      opacity: 0;
+      animation: flameAppear 1s forwards 4.5s, flicker 0.15s infinite alternate 5.5s;
+    }
+
+    @keyframes appear {
+      to { opacity: 1; }
+    }
+
+    @keyframes flameAppear {
+      to { opacity: 1; }
+    }
+
+    @keyframes flicker {
+      from {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.9;
+      }
+      to {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.6;
+      }
+    }
+
+    /* Text */
+    h2 {
+      position: absolute;
+      top: 85%;
+      width: 100%;
+      text-align: center;
+      font-size: 2rem;
+      color: #ff4081;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      opacity: 0;
+      animation: appear 2s forwards;
+      animation-delay: 6s;
+    }
